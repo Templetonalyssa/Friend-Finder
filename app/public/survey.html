@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <title>Document</title>
+    <title>Monster Match Survey</title>
 </head>
 
 <body>
@@ -31,7 +31,9 @@
 
             <div class="w3-container w3-center">
 
-                <li>1. You like causing destruction.</li>
+                <ul>
+                    <h3>1. You enjoy causing destruction.</h3>
+                </ul>
                 <select class="chosen" id="q1" onchange="getSelectValue();">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -42,7 +44,9 @@
                 </select>
                 <br>
                 <br>
-                <li>2. You often feel misunderstood based on your appearance.</li>
+                <ul>
+                    <h3>2. You often feel misunderstood based on your appearance.</h3>
+                </ul>
                 <select class="chosen" id="q2">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -53,7 +57,9 @@
                 </select>
                 <br>
                 <br>
-                <li>3. Grunts, howls or whistles are your preferred form of communication instead of words.</li>
+                <ul>
+                    <h3>3. Grunts, howls or whistles are your preferred form of communication instead of words.</h3>
+                </ul>
                 <select class="chosen" id="q3">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -64,7 +70,9 @@
                 </select>
                 <br>
                 <br>
-                <li>4. You are primarily nocturnal.</li>
+                <ul>
+                    <h3>4. You are primarily nocturnal.</h3>
+                </ul>
                 <select class="chosen" id="q4">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -75,7 +83,9 @@
                 </select>
                 <br>
                 <br>
-                <li>5. You prefer to be outdoors rather than indoors.</li>
+                <ul>
+                    <h3>5. You prefer to be outdoors rather than indoors.</h3>
+                </ul>
                 <select class="chosen" id="q5">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -86,7 +96,9 @@
                 </select>
                 <br>
                 <br>
-                <li>6. A life of luxury is definitely your goal.</li>
+                <ul>
+                    <h3>6. A life of luxury is definitely your goal.</h3>
+                </ul>
                 <select class="chosen" id="q6">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -97,7 +109,9 @@
                 </select>
                 <br>
                 <br>
-                <li>7. You like to silently observe others.</li>
+                <ul>
+                    <h3>7. You like to silently observe others.</h3>
+                </ul>
                 <select class="chosen" id="q7">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -108,7 +122,9 @@
                 </select>
                 <br>
                 <br>
-                <li>8. You enjoy being part of a group.</li>
+                <ul>
+                    <h3>8. You enjoy being part of a group.</h3>
+                </ul>
                 <select class="chosen" id="q8">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -119,7 +135,9 @@
                 </select>
                 <br>
                 <br>
-                <li>9. Loud noises upset you.</li>
+                <ul>
+                    <h3>9. Loud noises upset you.</h3>
+                </ul>
                 <select class="chosen" id="q9">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -130,7 +148,9 @@
                 </select>
                 <br>
                 <br>
-                <li>10.You often dream of converting other people to partake in your dark desires.</li>
+                <ul>
+                    <h3>10.You often dream of converting other people to partake in your dark desires.</h3>
+                </ul>
                 <select class="chosen" id="q10">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -146,51 +166,44 @@
 
 
         <div class="w3-theme-l3 w3-center">
-            <button onclick = "document.getElementById('id01').style.display='block'" id="search-btn" class=" w3-button w3-xlarge w3-circle w3-theme-action">Submit</button>
+            <button onclick="document.getElementById('id01').style.display='block'" id="search-btn" class=" w3-button w3-xlarge w3-circle w3-theme-action w3-green">Submit</button>
             <p></p>
         </div>
         <br>
 
-        <footer class="footer" style= "margin-left: 50px; padding: 10px;">
+        <footer class="footer" style="margin-left: 50px; padding: 10px;">
             <div class="container">
-              <p>
-                <a href="/api/friends">API Table Link</a> 
+                <p>
+                    <a href="/api/friends">API Table Link</a>
             </div>
-          </footer>
+        </footer>
 
-
-          <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Animated Modal</button> -->
-
-          <div id="id01" class="w3-modal">
+        <div id="id01" class="w3-modal">
             <div class="w3-modal-content w3-animate-top w3-card-4">
-              <header class="w3-container w3-green"> 
-                <span onclick="document.getElementById('id01').style.display='none'" 
-                class="w3-button w3-display-topright">&times;</span>
-                <h2>Meet Your Monster Match!</h2>
-              </header>
-              <div class="w3-container">
-                <p>Some text..</p>
-                <p>Some text..</p>
-              </div>
-              <footer class="w3-container w3-teal">
-                <p>Modal Footer</p>
-              </footer>
+                <header class="w3-container w3-green">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h2>Meet Your Monster Match!</h2>
+                </header>
+                <div class="w3-container">
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                </div>
             </div>
-          </div>
+        </div>
 
     </div>
 
 
-     <script type="text/javascript">
+    <script type="text/javascript">
         //$("#search-btn").on("click", function() {
-           function getSelectValue() {
-               var selectedValue = document.getElementsByClassName("chosen").value;
-               console.log(selectedValue);
-           }
+        function getSelectValue() {
+            var selectedValue = document.getElementsByClassName("chosen").value;
+            console.log(selectedValue);
+        }
         //});
 
         getSelectValue();
-      </script> 
+    </script>
 </body>
 
 </html>
