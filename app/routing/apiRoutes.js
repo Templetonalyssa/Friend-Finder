@@ -9,6 +9,6 @@ module.exports = function(app){
     });
 
     app.post("/api/friends", function(req, res){
-        //code that analyzes comparison of inputs from dropdown menu to value of each monster
+        //code that analyzes comparison of inputs from dropdown menu to value of each monster. will evaluate absolute value of selected value sum vs. monster sum
     });
 };

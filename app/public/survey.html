@@ -32,7 +32,7 @@
             <div class="w3-container w3-center">
 
                 <li>1. You like causing destruction.</li>
-                <select class="chosen select" id="q1">
+                <select class="chosen" id="q1" onchange="getSelectValue();">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -43,7 +43,7 @@
                 <br>
                 <br>
                 <li>2. You often feel misunderstood based on your appearance.</li>
-                <select class="chosen select" id="q2">
+                <select class="chosen" id="q2">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -54,7 +54,7 @@
                 <br>
                 <br>
                 <li>3. Grunts, howls or whistles are your preferred form of communication instead of words.</li>
-                <select class="chosen select" id="q3">
+                <select class="chosen" id="q3">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -65,7 +65,7 @@
                 <br>
                 <br>
                 <li>4. You are primarily nocturnal.</li>
-                <select class="chosen select" id="q4">
+                <select class="chosen" id="q4">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -76,7 +76,7 @@
                 <br>
                 <br>
                 <li>5. You prefer to be outdoors rather than indoors.</li>
-                <select class="chosen select" id="q5">
+                <select class="chosen" id="q5">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -86,8 +86,8 @@
                 </select>
                 <br>
                 <br>
-                <li>6. You like shiny things.</li>
-                <select class="chosen select" id="q6">
+                <li>6. A life of luxury is definitely your goal.</li>
+                <select class="chosen" id="q6">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -98,7 +98,7 @@
                 <br>
                 <br>
                 <li>7. You like to silently observe others.</li>
-                <select class="chosen select" id="q7">
+                <select class="chosen" id="q7">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -109,7 +109,7 @@
                 <br>
                 <br>
                 <li>8. You enjoy being part of a group.</li>
-                <select class="chosen select" id="q8">
+                <select class="chosen" id="q8">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -120,7 +120,7 @@
                 <br>
                 <br>
                 <li>9. Loud noises upset you.</li>
-                <select class="chosen select" id="q9">
+                <select class="chosen" id="q9">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -131,7 +131,7 @@
                 <br>
                 <br>
                 <li>10.You often dream of converting other people to partake in your dark desires.</li>
-                <select class="chosen select" id="q10">
+                <select class="chosen" id="q10">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -146,7 +146,7 @@
 
 
         <div class="w3-theme-l3 w3-center">
-            <a class=" w3-button w3-xlarge w3-circle w3-theme-action">Submit</a>
+            <button onclick = "document.getElementById('id01').style.display='block'" id="search-btn" class=" w3-button w3-xlarge w3-circle w3-theme-action">Submit</button>
             <p></p>
         </div>
         <br>
@@ -154,11 +154,43 @@
         <footer class="footer" style= "margin-left: 50px; padding: 10px;">
             <div class="container">
               <p>
-                <a href="/api/monsters">API Table Link</a> 
+                <a href="/api/friends">API Table Link</a> 
             </div>
           </footer>
 
+
+          <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Animated Modal</button> -->
+
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+              <header class="w3-container w3-green"> 
+                <span onclick="document.getElementById('id01').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h2>Meet Your Monster Match!</h2>
+              </header>
+              <div class="w3-container">
+                <p>Some text..</p>
+                <p>Some text..</p>
+              </div>
+              <footer class="w3-container w3-teal">
+                <p>Modal Footer</p>
+              </footer>
+            </div>
+          </div>
+
     </div>
+
+
+     <script type="text/javascript">
+        //$("#search-btn").on("click", function() {
+           function getSelectValue() {
+               var selectedValue = document.getElementsByClassName("chosen").value;
+               console.log(selectedValue);
+           }
+        //});
+
+        getSelectValue();
+      </script> 
 </body>
 
 </html>

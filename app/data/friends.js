@@ -4,15 +4,16 @@ var monsterArray = [
       photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
       scores: [
           5,
-          4,
+          5,
+          5,
           1,
+          5,
           1,
-          4,
-          3,
           3,
           4,
           1,
           1
+          //sum 31
       ]
     },
     {
@@ -29,6 +30,7 @@ var monsterArray = [
             4,
             1,
             1
+            //sum 24
         ]
       },
       {
@@ -40,11 +42,12 @@ var monsterArray = [
             1,
             2,
             4,
-            3,
+            4,
             3,
             4,
             2,
             1
+            //sum 26
         ]
       },
       {
@@ -56,11 +59,12 @@ var monsterArray = [
             1,
             1,
             4,
-            3,
+            1,
             3,
             4,
             1,
             1
+            //sum 23
         ]
       },
       {
@@ -71,12 +75,13 @@ var monsterArray = [
             1,
             1,
             5,
-            3,
-            3,
-            3,
+            1,
+            5,
+            5,
             1,
             1,
             5
+            //sum 30
         ]
       }
     
