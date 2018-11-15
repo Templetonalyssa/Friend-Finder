@@ -198,19 +198,17 @@
 
         var arrayQs = $(".chosen");
 
-
-        $("#search-btn").on("click", function() {
+        $("#search-btn").on("click", function () {
 
             var sum = 0;
             for (var i = 0; i < arrayQs.length; i++) {
-            console.log(arrayQs[i].value);
-            
-            sum += parseInt(arrayQs[i].value);
-        }
+                console.log(arrayQs[i].value);
+
+                sum += parseInt(arrayQs[i].value);
+            }
             console.log(sum);
 
-        }); 
-
+        });
     </script>
 </body>
 
