@@ -198,21 +198,19 @@
 
         var arrayQs = $(".chosen");
 
-        for (var i = 0; i < arrayQs.length; i++) {
+
+        $("#search-btn").on("click", function() {
+
+            var sum = 0;
+            for (var i = 0; i < arrayQs.length; i++) {
             console.log(arrayQs[i].value);
+            
+            sum += parseInt(arrayQs[i].value);
         }
+            console.log(sum);
 
+        }); 
 
-        // //$("#search-btn").on("click", function() {
-        // function getSelectValue() {
-        //     //var selectedValue = document.getElementsByClassName("chosen").val();
-        //     console.log(selectedValue);
-        // }
-        // //});
-
-        // getSelectValue();
-
-        //function that pushes calculated value to modal
     </script>
 </body>
 
