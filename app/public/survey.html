@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
     <title>Monster Match Survey</title>
 </head>
 
@@ -33,7 +34,7 @@
                 <ul>
                     <h3>1. You enjoy causing destruction.</h3>
                 </ul>
-                <select class="chosen" id="q1" onchange="getSelectValue();">
+                <select class="chosen" id="q1">
                     <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2 </option>
@@ -195,13 +196,13 @@
 
     <script type="text/javascript">
 
-    var arrayQs= $(".chosen");
+        var arrayQs = $(".chosen");
 
-    for (var i = 0; i < arrayQs.length; i++){
-        console.log(arrayQs[i].val());
-    }
-    
-            
+        for (var i = 0; i < arrayQs.length; i++) {
+            console.log(arrayQs[i].value);
+        }
+
+
         // //$("#search-btn").on("click", function() {
         // function getSelectValue() {
         //     //var selectedValue = document.getElementsByClassName("chosen").val();
