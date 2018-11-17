@@ -166,7 +166,7 @@
 
 
         <div class="w3-theme-l3 w3-center">
-                <!-- onclick="document.getElementById('id01').style.display='block'" -->
+            <!-- onclick="document.getElementById('id01').style.display='block'" -->
             <button id="search-btn" class=" w3-button w3-xlarge w3-circle w3-theme-action w3-green">Submit</button>
             <p></p>
         </div>
@@ -201,6 +201,7 @@
         var name = $("#name").val().trim;
         var photo = $("#photo").val();
         var scores = [];
+        var valid = true;
 
         //on-click event for when the user clicks the submit button
 
@@ -213,32 +214,37 @@
             for (var i = 0; i < arrayQs.length; i++) {
                 //console.log(arrayQs[i].value);
                 scores.push(parseInt(arrayQs[i].value));
+            };
+
+            if ($("#name").val() === "" || $("#photo").val() === "") {
+                valid = false;
+            } else if ($(".chosen").val() === "empty") {
+                valid = false;
             }
 
-            //now we take all the user inputs and turn them into an object that is a direct apples to apples comparison of the monsters in friends.js. If you go look at the friends.js file, you'll see we can have a direct comparison of the user input format to the already coded monsters. 
-            var userInput = {
-                name: name,
-                photo: photo,
-                scores: scores
+            if (valid === true) {
+                var userInput = {
+                    name: name,
+                    photo: photo,
+                    scores: scores
+                }
+
             }
+
+
+            //now we take all the user inputs and turn them into an object that is a direct apples to apples comparison of the monsters in friends.js. If you go look at the friends.js file, you'll see we can have a direct comparison of the user input format to the already coded monsters. 
 
             $.post("/api/friends", userInput,
                 function (data) {
 
-                   $(#"search-btn").on("click", function(event){
-                       event.preventDefault();
+                    document.getElementById('id01').style.display = 'block'
 
-                       document.getElementById('id01').style.display='block'
-                   }); 
-            
                     //Clear the form
-
                     var arrayQs = $(".chosen").value("");
                     var name = $("#name").val("");
                     var photo = $("#photo").val("");
+                });
 
-
-                })
 
 
         });

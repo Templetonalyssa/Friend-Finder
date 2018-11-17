@@ -1,25 +1,24 @@
-var monsterArray = [
-    {
-      name: "Fuzzy McGee",
-      photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
-      scores: [
-          5,
-          5,
-          5,
-          1,
-          5,
-          1,
-          3,
-          4,
-          1,
-          1
-          //sum 31
-      ]
+[{
+        "name": "Fuzzy McGee",
+        "photo": "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        "scores": [
+            5,
+            5,
+            5,
+            1,
+            5,
+            1,
+            3,
+            4,
+            1,
+            1
+    
+        ]
     },
     {
-        name: "Doodly Dora",
-        photo: "../public/images/doodlebug.jpg/",
-        scores: [
+        "name": "Doodly Dora",
+        "photo": "../public/images/doodlebug.jpg/",
+        "scores": [
             3,
             3,
             1,
@@ -30,13 +29,13 @@ var monsterArray = [
             4,
             1,
             1
-            //sum 24
+            
         ]
-      },
-      {
-        name: "Valentina",
-        photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
-        scores: [
+    },
+    {
+        "name": "Valentina",
+        "photo": "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        "scores": [
             1,
             4,
             1,
@@ -47,13 +46,13 @@ var monsterArray = [
             4,
             2,
             1
-            //sum 26
+            
         ]
-      },
-      {
-        name: "Beatrice",
-        photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
-        scores: [
+    },
+    {
+        "name": "Beatrice",
+        "photo": "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        "scores": [
             4,
             2,
             1,
@@ -64,13 +63,13 @@ var monsterArray = [
             4,
             1,
             1
-            //sum 23
+        
         ]
-      },
-      {
-        name: "Vlad",
-        photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
-        scores: [
+    },
+    {
+        "name": "Vlad",
+        "photo": "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        "scores": [
             5,
             1,
             1,
@@ -81,10 +80,7 @@ var monsterArray = [
             1,
             1,
             5
-            //sum 30
         ]
-      }
-    
-  ];
+    }
 
-  module.exports = monsterArray;
+]
