@@ -184,7 +184,7 @@
                     <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                     <h2>Meet Your Monster Match!</h2>
                 </header>
-                <div class="w3-container">
+                <div class="w3-container modal text">
                     <p>Some text..</p>
                     <p>Some text..</p>
                 </div>
@@ -196,10 +196,32 @@
 
     <script type="text/javascript">
 
+        function monsterMatch(){
+            $.ajax({ url: "/api/friends", method: "GET"})
+            .then(function(friends){
+                console.log(friends);
+                console.log("----------------");
+
+                for (var i = 0; i < friends.length; i ++) {
+
+                    var friendsList = $("#friendsList");
+
+                    var listFriends = $("<li class = 'w3-container modal text'>");
+
+                    listFriends.append(
+                        //add JQueryfied html to render selected Monster within modal. Monster can only be selected after running matchFriends();
+                    )
+                }
+            })
+
+        };
+
         var arrayQs = $(".chosen");
 
-        $("#search-btn").on("click", function () {
+        $("#search-btn").on("click", function (event) {
+            event.preventDefault();
 
+          //Grabbing form elements
             var sum = 0;
             for (var i = 0; i < arrayQs.length; i++) {
                 console.log(arrayQs[i].value);
@@ -207,6 +229,12 @@
                 sum += parseInt(arrayQs[i].value);
             }
             console.log(sum);
+
+            $.post("/api/friends", sum, 
+            function(data){
+                //comparison of sum with user array closest to value.
+            })
+
 
         });
     </script>
