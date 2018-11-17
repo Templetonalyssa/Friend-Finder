@@ -166,7 +166,8 @@
 
 
         <div class="w3-theme-l3 w3-center">
-            <button onclick="document.getElementById('id01').style.display='block'" id="search-btn" class=" w3-button w3-xlarge w3-circle w3-theme-action w3-green">Submit</button>
+                <!-- onclick="document.getElementById('id01').style.display='block'" -->
+            <button id="search-btn" class=" w3-button w3-xlarge w3-circle w3-theme-action w3-green">Submit</button>
             <p></p>
         </div>
         <br>
@@ -195,59 +196,75 @@
 
 
     <script type="text/javascript">
-        function monsterMatch() {
-            $.ajax({
-                    url: "/api/friends",
-                    method: "GET"
-                })
-                .then(function (friends) {
-                    console.log(friends);
-                    console.log("----------------");
-
-                    for (var i = 0; i < friends.length; i++) {
-
-                        var friendsList = $("#friendsList");
-
-                        var listFriends = $("<li class = 'w3-container modal text'>");
-
-                        listFriends.append(
-                            //add JQueryfied html to render selected Monster within modal. Monster can only be selected after running matchFriends();
-                        )
-                    }
-                })
-
-        };
-
+        //setting up user inputs as jQuery to be used as global variables for later
         var arrayQs = $(".chosen");
         var name = $("#name").val().trim;
         var photo = $("#photo").val();
         var scores = [];
 
+        //on-click event for when the user clicks the submit button
+
         $("#search-btn").on("click", function (event) {
             event.preventDefault();
 
             //Grabbing form elements
-
+            //I chose to do a for loop that uses the designated class of the user inputs to grab the data. The other way to do this would be to grab each input by id.
+            //This for loop stores the user inputs as an array
             for (var i = 0; i < arrayQs.length; i++) {
-                console.log(arrayQs[i].value);
-
+                //console.log(arrayQs[i].value);
                 scores.push(parseInt(arrayQs[i].value));
             }
 
+            //now we take all the user inputs and turn them into an object that is a direct apples to apples comparison of the monsters in friends.js. If you go look at the friends.js file, you'll see we can have a direct comparison of the user input format to the already coded monsters. 
             var userInput = {
                 name: name,
                 photo: photo,
                 scores: scores
             }
 
-
             $.post("/api/friends", userInput,
                 function (data) {
-                    //comparison of sum with user array closest to value.
+
+                   $(#"search-btn").on("click", function(event){
+                       event.preventDefault();
+
+                       document.getElementById('id01').style.display='block'
+                   }); 
+            
+                    //Clear the form
+
+                    var arrayQs = $(".chosen").value("");
+                    var name = $("#name").val("");
+                    var photo = $("#photo").val("");
+
+
                 })
 
 
         });
+
+        // function monsterMatch() {
+        //     $.ajax({
+        //             url: "/api/friends",
+        //             method: "GET"
+        //         })
+        //         .then(function (friends) {
+        //             console.log(friends);
+        //             console.log("----------------");
+
+        //             for (var i = 0; i < friends.length; i++) {
+
+        //                 var friendsList = $("#friendsList");
+
+        //                 var listFriends = $("<li class = 'w3-container modal text'>");
+
+        //                 listFriends.append(
+        //                     //add JQueryfied html to render selected Monster within modal. Monster can only be selected after running matchFriends();
+        //                 )
+        //             }
+        //         })
+
+        // };
     </script>
 </body>
 
