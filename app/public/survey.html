@@ -23,10 +23,10 @@
             <br>
 
             <label>Name (Required)</label>
-            <input class="w3-input" type="text">
+            <input id="name" class="w3-input" type="text">
 
             <label>Link to Photo of You (Required)</label>
-            <input class="w3-input" type="text">
+            <input id="photo" class="w3-input" type="text">
             <br>
 
             <div class="w3-container w3-center">
@@ -195,45 +195,56 @@
 
 
     <script type="text/javascript">
+        function monsterMatch() {
+            $.ajax({
+                    url: "/api/friends",
+                    method: "GET"
+                })
+                .then(function (friends) {
+                    console.log(friends);
+                    console.log("----------------");
 
-        function monsterMatch(){
-            $.ajax({ url: "/api/friends", method: "GET"})
-            .then(function(friends){
-                console.log(friends);
-                console.log("----------------");
+                    for (var i = 0; i < friends.length; i++) {
 
-                for (var i = 0; i < friends.length; i ++) {
+                        var friendsList = $("#friendsList");
 
-                    var friendsList = $("#friendsList");
+                        var listFriends = $("<li class = 'w3-container modal text'>");
 
-                    var listFriends = $("<li class = 'w3-container modal text'>");
-
-                    listFriends.append(
-                        //add JQueryfied html to render selected Monster within modal. Monster can only be selected after running matchFriends();
-                    )
-                }
-            })
+                        listFriends.append(
+                            //add JQueryfied html to render selected Monster within modal. Monster can only be selected after running matchFriends();
+                        )
+                    }
+                })
 
         };
 
         var arrayQs = $(".chosen");
+        var name = $("#name").val().trim;
+        var photo = $("#photo").val();
+        var scores = [];
 
         $("#search-btn").on("click", function (event) {
             event.preventDefault();
 
-          //Grabbing form elements
-            var sum = 0;
+            //Grabbing form elements
+
             for (var i = 0; i < arrayQs.length; i++) {
                 console.log(arrayQs[i].value);
 
-                sum += parseInt(arrayQs[i].value);
+                scores.push(parseInt(arrayQs[i].value));
             }
-            console.log(sum);
 
-            $.post("/api/friends", sum, 
-            function(data){
-                //comparison of sum with user array closest to value.
-            })
+            var userInput = {
+                name: name,
+                photo: photo,
+                scores: scores
+            }
+
+
+            $.post("/api/friends", userInput,
+                function (data) {
+                    //comparison of sum with user array closest to value.
+                })
 
 
         });
