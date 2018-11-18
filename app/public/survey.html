@@ -186,8 +186,8 @@
                     <h2>Meet Your Monster Match!</h2>
                 </header>
                 <div class="w3-container modal text">
-                    <p>Some text..</p>
-                    <p>Some text..</p>
+                    <p id = "monstermatch">Some text..</p>
+                    <img id = "monsterpic"> 
                 </div>
             </div>
         </div>
@@ -198,7 +198,7 @@
     <script type="text/javascript">
         //setting up user inputs as jQuery to be used as global variables for later
         var arrayQs = $(".chosen");
-        var name = $("#name").val().trim;
+        var name = $("#name").val().trim();
         var photo = $("#photo").val();
         var scores = [];
         var valid = true;
@@ -236,8 +236,13 @@
 
             $.post("/api/friends", userInput,
                 function (data) {
-
+                     
+                     
                     document.getElementById('id01').style.display = 'block'
+
+                    console.log(data)
+                    $("#monstermatch").text(data.name);
+                    $("#monsterpic").attr("src",data.photo);
 
                     //Clear the form
                     var arrayQs = $(".chosen").value("");
