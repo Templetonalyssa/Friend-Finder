@@ -13,7 +13,6 @@ module.exports = function(app){
 
     app.post("/api/friends", function(req, res){
         //code that analyzes comparison of inputs from dropdown menu to value of each monster. will evaluate absolute value of selected value sum vs. monster sum. 
-        //How do I get the friends.js file into here? the friends.js file is currently a giant array. right now the sum portion of it would be monsterArray.scores. I feel like a for loop is somewhere in my future because I have to go through each index in the array.
           
         console.log(req.body);
        
