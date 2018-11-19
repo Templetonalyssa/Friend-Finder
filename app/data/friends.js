@@ -1,6 +1,6 @@
 var monsterArray = [{
         name: "Fuzzy McGee",
-        photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        photo: "https://banner2.kisspng.com/20180303/alq/kisspng-monster-furry-fandom-stock-photography-royalty-fre-hairy-monster-5a9a4dde5d6ce8.2396749715200619183827.jpg",
         scores: [
             5,
             5,
@@ -17,7 +17,7 @@ var monsterArray = [{
     },
     {
         name: "Doodly Dora",
-        photo: "../public/images/doodlebug.jpg/",
+        photo: "https://banner2.kisspng.com/20180302/gwq/kisspng-cookie-monster-godzilla-illustrator-illustration-orang-monsters-5a998f601e79e7.9790362315200131521248.jpg",
         scores: [
             3,
             3,
@@ -34,7 +34,7 @@ var monsterArray = [{
     },
     {
         name: "Valentina",
-        photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        photo: "https://banner2.kisspng.com/20171211/4f7/cartoon-monster-5a2e18b9f2b0b0.4316176415129704259941.jpg",
         scores: [
             1,
             4,
@@ -51,7 +51,7 @@ var monsterArray = [{
     },
     {
         name: "Beatrice",
-        photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        photo: "https://banner2.kisspng.com/20180222/rye/kisspng-monster-behance-illustration-green-monster-5a8ea152674649.065136811519296850423.jpg",
         scores: [
             4,
             2,
@@ -68,7 +68,7 @@ var monsterArray = [{
     },
     {
         name: "Vlad",
-        photo: "../public/images/fluffy-clipart-fuzzy-monster-611378-8534139.jpg/",
+        photo: "https://i.ebayimg.com/images/g/6KcAAOSwALtaenNu/s-l640.jpg",
         scores: [
             5,
             1,
