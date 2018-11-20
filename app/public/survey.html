@@ -166,7 +166,7 @@
 
 
         <div class="w3-theme-l3 w3-center">
-        
+
             <button id="search-btn" class=" w3-button w3-xlarge w3-circle w3-theme-action w3-green">Submit</button>
             <p></p>
         </div>
@@ -186,15 +186,15 @@
                     <h2>Meet Your Monster Match!</h2>
                 </header>
                 <div class="w3-container modal text">
-                    <p id = "monstermatch">Some text..</p>
-                    <img id = "monsterpic"> 
+                    <p id="monstermatch" style="font-weight: bold; font-size: 20px"></p>
+                    <img id="monsterpic" style="width: 80%; height: 80%; align-content: center">
                 </div>
             </div>
         </div>
 
     </div>
 
-
+ 
     <script type="text/javascript">
         //setting up user inputs as jQuery to be used as global variables for later
         var arrayQs = $(".chosen");
@@ -236,13 +236,13 @@
 
             $.post("/api/friends", userInput,
                 function (data) {
-                     
-                     
+
+
                     document.getElementById('id01').style.display = 'block'
 
                     console.log(data)
                     $("#monstermatch").text(data.name);
-                    $("#monsterpic").attr("src",data.photo);
+                    $("#monsterpic").attr("src", data.photo);
 
                     //Clear the form
                     var arrayQs = $(".chosen").value("");
@@ -253,7 +253,6 @@
 
 
         });
-
     </script>
 </body>
 
