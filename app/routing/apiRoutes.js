@@ -20,6 +20,7 @@ module.exports = function(app){
        var newFriend = {};
        var minDiff = 100;
        for (var i = 0; i<friends.length; i++){
+           
            var diff = 0;
            for (var j = 0; j<userScores.length; j++){
                 var question = Math.abs(userScores[j]-friends[i].scores[j]);
